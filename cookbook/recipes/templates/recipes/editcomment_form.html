@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block comments %}
+
+<h2>Kommentar bearbeiten</h2>
+<form  method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<p><input type="submit" value="Speichern"/></p>
+</form>
+<a href="{% url recipes_index %}">zurück zur Übersicht</a>
+{% endblock %}

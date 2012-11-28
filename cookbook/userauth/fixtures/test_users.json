@@ -1,0 +1,616 @@
+[
+    {
+        "pk": 8,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "category",
+            "name": "Kategorie",
+            "app_label": "recipes"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "recipe",
+            "name": "Rezept",
+            "app_label": "recipes"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "contenttype",
+            "name": "content type",
+            "app_label": "contenttypes"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "group",
+            "name": "group",
+            "app_label": "auth"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "logentry",
+            "name": "log entry",
+            "app_label": "admin"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "permission",
+            "name": "permission",
+            "app_label": "auth"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "session",
+            "name": "session",
+            "app_label": "sessions"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "site",
+            "name": "site",
+            "app_label": "sites"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "model": "user",
+            "name": "user",
+            "app_label": "auth"
+        }
+    },
+    {
+        "pk": "ccdd096de1c5879711915c2f69acc056",
+        "model": "sessions.session",
+        "fields": {
+            "expire_date": "2012-11-28T09:03:50.288Z",
+            "session_data": "MDQ1YmYwNTg2NTJiNzFjNmVhOGZjZGFlYWI4YmQ4MGE4Y2M0NWRmYTqAAn1xAVUKdGVzdGNvb2tp\nZXECVQZ3b3JrZWRxA3Mu\n"
+        }
+    },
+    {
+        "pk": "63dc0b65dc8c234a7211320406f0dd49",
+        "model": "sessions.session",
+        "fields": {
+            "expire_date": "2012-11-28T15:09:30.217Z",
+            "session_data": "MjMyOGY2NTliNTAwMTIxZTY0YjM3NzQ1MThjNmI2YmMzNDg4MjYwODqAAn1xAS4=\n"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "sites.site",
+        "fields": {
+            "domain": "example.com",
+            "name": "example.com"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "recipes.category",
+        "fields": {
+            "description": "",
+            "name": "schnelles Essen",
+            "slug": "schnelles-essen"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "recipes.category",
+        "fields": {
+            "description": "",
+            "name": "Pasta",
+            "slug": "pasta"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "recipes.category",
+        "fields": {
+            "description": "",
+            "name": "Suppe",
+            "slug": "suppe"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "recipes.category",
+        "fields": {
+            "description": "",
+            "name": "Fleisch",
+            "slug": "fleisch"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "recipes.category",
+        "fields": {
+            "description": "",
+            "name": "Backen",
+            "slug": "backen"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "recipes.category",
+        "fields": {
+            "description": "",
+            "name": "Fr\u00fchling",
+            "slug": "fruhling"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_logentry",
+            "name": "Can add log entry",
+            "content_type": 7
+        }
+    },
+    {
+        "pk": 20,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_logentry",
+            "name": "Can change log entry",
+            "content_type": 7
+        }
+    },
+    {
+        "pk": 21,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_logentry",
+            "name": "Can delete log entry",
+            "content_type": 7
+        }
+    },
+    {
+        "pk": 1,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_group",
+            "name": "Can add group",
+            "content_type": 2
+        }
+    },
+    {
+        "pk": 4,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_group",
+            "name": "Can change group",
+            "content_type": 2
+        }
+    },
+    {
+        "pk": 7,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_group",
+            "name": "Can delete group",
+            "content_type": 2
+        }
+    },
+    {
+        "pk": 2,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_permission",
+            "name": "Can add permission",
+            "content_type": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_permission",
+            "name": "Can change permission",
+            "content_type": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_permission",
+            "name": "Can delete permission",
+            "content_type": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_user",
+            "name": "Can add user",
+            "content_type": 3
+        }
+    },
+    {
+        "pk": 6,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_user",
+            "name": "Can change user",
+            "content_type": 3
+        }
+    },
+    {
+        "pk": 9,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_user",
+            "name": "Can delete user",
+            "content_type": 3
+        }
+    },
+    {
+        "pk": 10,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_contenttype",
+            "name": "Can add content type",
+            "content_type": 4
+        }
+    },
+    {
+        "pk": 11,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_contenttype",
+            "name": "Can change content type",
+            "content_type": 4
+        }
+    },
+    {
+        "pk": 12,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_contenttype",
+            "name": "Can delete content type",
+            "content_type": 4
+        }
+    },
+    {
+        "pk": 22,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_category",
+            "name": "Can add Kategorie",
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 24,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_category",
+            "name": "Can change Kategorie",
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 26,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_category",
+            "name": "Can delete Kategorie",
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 23,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_recipe",
+            "name": "Can add Rezept",
+            "content_type": 9
+        }
+    },
+    {
+        "pk": 25,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_recipe",
+            "name": "Can change Rezept",
+            "content_type": 9
+        }
+    },
+    {
+        "pk": 27,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_recipe",
+            "name": "Can delete Rezept",
+            "content_type": 9
+        }
+    },
+    {
+        "pk": 13,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_session",
+            "name": "Can add session",
+            "content_type": 5
+        }
+    },
+    {
+        "pk": 14,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_session",
+            "name": "Can change session",
+            "content_type": 5
+        }
+    },
+    {
+        "pk": 15,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_session",
+            "name": "Can delete session",
+            "content_type": 5
+        }
+    },
+    {
+        "pk": 16,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_site",
+            "name": "Can add site",
+            "content_type": 6
+        }
+    },
+    {
+        "pk": 17,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_site",
+            "name": "Can change site",
+            "content_type": 6
+        }
+    },
+    {
+        "pk": 18,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_site",
+            "name": "Can delete site",
+            "content_type": 6
+        }
+    },
+    {
+        "pk": 1,
+        "model": "auth.user",
+        "fields": {
+            "username": "ricky",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": true,
+            "is_staff": true,
+            "last_login": "2012-11-14T10:37:30.957Z",
+            "groups": [],
+            "user_permissions": [],
+            "password": "pbkdf2_sha256$10000$CF0JIUTniAGS$IV247BGrj5NJhVYZ+AL1i2JngkGQP18tD24cjCmDXYQ=",
+            "email": "rc@feinheit.ch",
+            "date_joined": "2012-11-13T11:04:15.479Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "auth.user",
+        "fields": {
+            "username": "rc",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": false,
+            "is_staff": false,
+            "last_login": "2012-11-14T10:39:35.268Z",
+            "groups": [],
+            "user_permissions": [],
+            "password": "pbkdf2_sha256$10000$qTQb6pbll4Pb$aEBiRwU1EI0DF84FQBywoTHPhvVLyDs4G0e8h6srsu8=",
+            "email": "",
+            "date_joined": "2012-11-14T10:38:19.640Z"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "recipes.recipe",
+        "fields": {
+            "category": [],
+            "time_for_preparation": null,
+            "number_of_portions": 4,
+            "author": 1,
+            "ingredients": "",
+            "date_updated": "2012-11-14T15:47:06.421Z",
+            "title": "Doctest",
+            "preparation": "",
+            "difficulty": 4,
+            "date_created": "2012-11-14T15:47:06.421Z",
+            "slug": "doctest"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "recipes.recipe",
+        "fields": {
+            "category": [
+                2
+            ],
+            "time_for_preparation": 12,
+            "number_of_portions": 1,
+            "author": 2,
+            "ingredients": "asdasd",
+            "date_updated": "2012-11-14T12:32:32.705Z",
+            "title": "test2123",
+            "preparation": "asd",
+            "difficulty": 1,
+            "date_created": "2012-11-14T12:32:32.705Z",
+            "slug": "test2123"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "recipes.recipe",
+        "fields": {
+            "category": [
+                2
+            ],
+            "time_for_preparation": 12,
+            "number_of_portions": 1,
+            "author": 2,
+            "ingredients": "asdasd",
+            "date_updated": "2012-11-14T11:35:02.655Z",
+            "title": "test2",
+            "preparation": "asd",
+            "difficulty": 1,
+            "date_created": "2012-11-14T11:35:02.655Z",
+            "slug": "test2"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "recipes.recipe",
+        "fields": {
+            "category": [
+                2
+            ],
+            "time_for_preparation": 12,
+            "number_of_portions": 1,
+            "author": 2,
+            "ingredients": "asd",
+            "date_updated": "2012-11-14T11:34:24.446Z",
+            "title": "test",
+            "preparation": "asd",
+            "difficulty": 1,
+            "date_created": "2012-11-14T11:34:24.446Z",
+            "slug": "test"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "recipes.recipe",
+        "fields": {
+            "category": [
+                1
+            ],
+            "time_for_preparation": 12,
+            "number_of_portions": 2,
+            "author": 2,
+            "ingredients": "asd",
+            "date_updated": "2012-11-14T11:28:08.832Z",
+            "title": "asd",
+            "preparation": "asd",
+            "difficulty": 1,
+            "date_created": "2012-11-14T11:28:08.832Z",
+            "slug": "asd"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "recipes.recipe",
+        "fields": {
+            "category": [
+                4,
+                5,
+                6
+            ],
+            "time_for_preparation": 10,
+            "number_of_portions": 2,
+            "author": 2,
+            "ingredients": "Ganz vieles",
+            "date_updated": "2012-11-14T11:26:34.946Z",
+            "title": "TestRezept",
+            "preparation": "So und so",
+            "difficulty": 2,
+            "date_created": "2012-11-14T11:26:34.946Z",
+            "slug": "testrezept"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "recipes.recipe",
+        "fields": {
+            "category": [
+                4,
+                5,
+                6
+            ],
+            "time_for_preparation": 30,
+            "number_of_portions": 4,
+            "author": 1,
+            "ingredients": "2 Handvoll\t B\u00e4rlauch, k\u00fcchenfertig\r\n200 g\t Gehacktes, (Faschiertes)\r\n3 \t Kartoffel(n)\r\n1 Pck.\t Bl\u00e4tterteig\r\n100 g\t K\u00e4se, w\u00fcrziger\r\n etwas\t Salz und Pfeffer\r\n etwas\t \u00d6l\r\n1 St\u00fcck\t Eiwei\u00df\r\n \t Gew\u00fcrzmischung (Suppen-)",
+            "date_updated": "2012-04-22T02:13:23.151Z",
+            "title": "B\u00e4rlauchstrudel",
+            "preparation": "Faschiertes etwas anr\u00f6sten. B\u00e4rlauch ca. 5 Minuten d\u00fcnsten. Kartoffeln kochen, sch\u00e4len und klein schneiden. \r\nFaschiertes, B\u00e4rlauch und Kartoffeln vermengen, mit Gew\u00fcrzen abschmecken. \r\nBl\u00e4tterteig ausrollen, Masse darauf verteilen, K\u00e4se dar\u00fcber streuen, Teig einrollen, mit Eiklar bestreichen und bei 180\u00b0 goldbraun backen!",
+            "difficulty": 1,
+            "date_created": "2012-04-22T02:13:23.151Z",
+            "slug": "barlauchstrudel"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "recipes.recipe",
+        "fields": {
+            "category": [
+                2,
+                3,
+                4
+            ],
+            "time_for_preparation": 50,
+            "number_of_portions": 4,
+            "author": 1,
+            "ingredients": "100 g\t Schinkenspeck\r\n50 g\t Zwiebel(n)\r\n1 Bund\t Fr\u00fchlingszwiebel(n) (Lauchzwiebeln)\r\n300 g\t M\u00f6hre(n)\r\n100 g\t Staudensellerie\r\n500 g\t Spitzkohl\r\n250 g\t Tomate(n)\r\n2 EL\t Oliven\u00f6l\r\n1 \t Knoblauchzehe(n)\r\n1 Liter\t Gem\u00fcsebr\u00fche\r\n150 g\t Erbsen, TK\r\n300 g\t Tortellini, aus dem K\u00fchlregal\r\n1 Pck.\t Kresse",
+            "date_updated": "2012-04-22T00:02:54.199Z",
+            "title": "Kohleintopf mit Tortellini",
+            "preparation": "Speck fein w\u00fcrfeln. Zwiebeln abziehen und hacken. Fr\u00fchlingszwiebeln waschen. Kohl putzen, den Strunk und die Blattrippen entfernen. M\u00f6hren und Sellerie putzen und in Scheiben schneiden. Die Fr\u00fchlingszwiebeln in Ringe und den Kohl in St\u00fccke schneiden. Tomaten mit kochendem Wasser \u00fcberbr\u00fchen, h\u00e4uten, vierteln, entkernen, dann halbieren. \r\n\r\n\u00d6l in einem Topf erhitzen. Speck und Zwiebeln darin anbraten. Das vorbereitete Gem\u00fcse und die ungepellte Knoblauchzehe zuf\u00fcgen. Alles noch mal ca. 4 Minuten mitbraten. Die Br\u00fche zugie\u00dfen und den Eintopf ca. 20 Minuten kochen. \r\nDanach Erbsen, Tomaten und Tortellini zugeben und weitere 5 Minuten kochen. Zum Schluss den fertigen Eintopf mit Kresse bestreuen. \r\n\r\nDazu passen geriebener Parmesank\u00e4se und Bauernbrot",
+            "difficulty": 2,
+            "date_created": "2012-04-22T00:02:54.199Z",
+            "slug": "kohleintopf-mit-tortellini"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "recipes.recipe",
+        "fields": {
+            "category": [
+                1,
+                2
+            ],
+            "time_for_preparation": 30,
+            "number_of_portions": 2,
+            "author": 1,
+            "ingredients": "2 \t Ei(er)\r\n2 Scheiben\t K\u00e4se, ( z.B. Tilsiter)\r\n1 Paket\t Spinat, (Rahm- Tiefk\u00fchlware ca.450g)\r\n200 g\t Nudeln, (z.B. Mini-Penne)\r\n \t Salz\r\n \t Muskat\r\n etwas\t Butter\r\n etwas\t Milch",
+            "date_updated": "2012-04-22T00:01:14.058Z",
+            "title": "K\u00e4sespiegelei auf Spinatnudeln",
+            "preparation": "Den Spinat in eine mikrowellengeeignete Sch\u00fcssel geben, mit Salz und Muskat w\u00fcrzen. Mit einem Teller bedecken und in der Mikrowelle bei h\u00f6chster Stufe ca. 14 Minuten garen. Kurz vor Ende der Garzeit noch etwas Milch (ca. 2 EL) hinzuf\u00fcgen und umr\u00fchren.\r\nIn der Zwischenzeit die Penne nach Packungsanweisung kochen.\r\nSobald die Nudeln im Wasser sind, in einer beschichteten Pfanne etwas Butter schmelzen lassen und die Pfanne mit den K\u00e4sescheiben auslegen. Den K\u00e4se etwas mitschmelzen lassen, bis er sch\u00f6n cremig aussieht. Dann die Eier darauf geben, salzen und langsam fertig backen.\r\nNudeln und Spinat auf den Teller geben, das K\u00e4sespiegelei dazu - fertig.\r\nWenn man in dieser Reihenfolge arbeitet, bekommt man nach 15 Minuten ein sehr preiswertes und einfaches Gericht.",
+            "difficulty": 1,
+            "date_created": "2012-04-22T00:01:14.058Z",
+            "slug": "kasespiegelei-auf-spinatnudeln"
+        }
+    }
+]

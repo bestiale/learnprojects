@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load recipes %}
+
+{% block title %}{{ block.super }} - {{ object.title }}{% endblock %}
+
+{% block content %}
+	<h2>{{ object.title }}</h2>
+	<h4>Kategorie{{ object.category.count|pluralize:"n" }}</h4>
+	<ul>
+{% for category in object.category.all %}
+		<li>{{ category.name }}</li>
+{% endfor %}
+	</ul>
+		<p>Author: {{ object.author }}</p>
+		<p>
+			Ergibt {{ object.number_of_portions }} 
+			Portion{{ object.number_of_portions|pluralize:"en" }}.
+		</p>
+		<p>Schwierigkeitsgrad: {{ object.get_difficulty_display }}</p>
+		<h3>Zutaten</h3>
+{{ object.ingredients|linebreaks }}
+		<h3>Zubereitung</h3>
+{{ object.preparation|linebreaks }}
+		<p>Zubereitungszeit: {{ object.time_for_preparation }} Minuten</p>
+{% is_author user object %}
+	<a href="{% url recipes_recipe_edit recipe_id=object.pk %}">Rezept bearbeiten</a>
+{% endis_author %}
+	<p><a href="{% url recipes_index %}">zurück zur Übersicht</a></p>
+	<h4>Kommentare</h4>
+{% show_comments object %}
+{% endblock %}

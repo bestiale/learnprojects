@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <header>
+    <h1>Kochbuch</h1>
+    {% block toggle_login %}
+         <a href="{% url recipes_recipe_add %}">Ein Rezept hinzufügen</a>
+    {% endblock %}
+  </header>
+  <div role="main">
+    <ul>
+    {% for recipe in object_list %}
+      {% url recipes_recipe_detail slug=recipe.slug as recipe_url %}
+      <li><a href="{{ recipe_url }}">{{ recipe.title }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

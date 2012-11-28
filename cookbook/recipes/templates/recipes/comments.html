@@ -1,0 +1,27 @@
+{% if user.is_authenticated %}
+	{% url recipes_recipe_add_comment slug=object.slug as action_url %}
+	<a class="button" href="{{ action_url }}">
+		<button>Poste ein Kommentar</button>
+	</a>
+{% else %}
+    <p>
+	Bitte <a href="{% url userauth_login %}">einloggen</a> um ein Kommentar
+    zu schreiben
+	</p>
+{% endif %}
+
+{% for comment in comments %}
+	<div class="show_comments">
+		<p>Kommentar von {{ comment.author }}: </p>
+		<p>{{ comment.comment }}</p>
+		<p>Geschrieben am: {{ comment.date_created  }}</p>
+		{% if user == comment.author %}
+			<a class="button" href="{% url recipes_recipe_edit_comment comment_id=comment.id %}">
+				<button>Edit</button>
+			</a>
+			<a class="button" href="{% url recipes_recipe_delete_comment comment_id=comment.id %}">
+				<button>Delete</button>
+			</a>
+		{% endif %}
+	</div>
+{% endfor %}
