@@ -1,0 +1,13 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>{% block title %}Kochbuch{% endblock %}</title>
+  	<link rel="stylesheet" href="{{ STATIC_URL }}css/main.css">
+  	<script src="{{ STATIC_URL }}js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body>
+   	{% include "userauth/toggle_login.html" %}
+	{% block content %}{% endblock %}
+	{% block comments %}{% endblock %}
+</body>
+</html>
