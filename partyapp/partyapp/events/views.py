@@ -22,6 +22,8 @@ def detail(request, slug):
 		'guests': party.guests.all(),
 	})
 
+
+@login_required
 def add(request):
     if request.method == 'POST':
         form = PartyForm(request.POST, request.FILES)
@@ -36,7 +38,7 @@ def add(request):
     return render(request, 'events/addpartyform.html',
         {'form': form })
 
-
+@login_required
 def edit(request, slug):
 	party = get_object_or_404(Party, slug=slug)
 
@@ -68,15 +70,7 @@ def signparty(request, slug):
 		form = VisitorForm()
 
 	return redirect(party.slug)
-
-
-@login_required
-def unsignparty(request, slug):
-	party = get_object_or_404(Party, slug=slug)
-
-	guest.delete()
-	return redirect('party_list')
-
+	
 
 @login_required
 def userpartys(request):

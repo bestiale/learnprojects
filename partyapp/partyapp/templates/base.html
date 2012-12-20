@@ -8,29 +8,31 @@
 </head>
 <body>
 	<div id="wrapper">
-		<div id="title"><h1>PartyApp</h1></div>
-			<div id="container">
-				<div id="navbar">
-					{% if user.is_authenticated %}
-						<p>Logged in as {{ user }}</p>
-					{% endif %}
-						<ul>
-							{% if user.is_authenticated %}
-							<li><a href="{% url party_list %}">Home</a></li>
-						    <li><a href="{% url add_party %}">Party eintragen</a></li>
-						   	<li><a href="{% url user_partys %}">Deine Partys</a></li>
-						    <li><a href="{% url user_visit_partys %}">Gast</a></li>
-						    <li><a href="/accounts/logout/">Logout</a></li>
-				    {% else %}
-				    		<li><a href="{% url party_list %}">Home</a></li>
-				    		<li><a href="/accounts/login/">Login</a></li>
-				    	</ul>
-			    	{% endif %}
-				</div>
-				<div id="content">
-				{% block content %}{% endblock %}
-				</div>
+		<div id="title">
+			<h1>PartyApp</h1>
+		</div>
+		<div id="container">
+			<div id="navbar">
+				{% if user.is_authenticated %}
+					<p>Logged in as {{ user }}</p>
+				{% endif %}
+					<ul>
+						{% if user.is_authenticated %}
+						<li><a href="{% url party_list %}">Home</a></li>
+					    <li><a href="{% url add_party %}">Party eintragen</a></li>
+					   	<li><a href="{% url user_partys %}">Deine Partys</a></li>
+					    <li><a href="{% url user_visit_partys %}">Gast</a></li>
+					    <li><a href="/accounts/logout/">Logout</a></li>
+			    {% else %}
+			    		<li><a href="{% url party_list %}">Home</a></li>
+			    		<li><a href="/accounts/login/">Login</a></li>
+			    	</ul>
+		    	{% endif %}
 			</div>
+			<div id="content">
+				{% block content %}{% endblock %}
+			</div>
+		</div>
 	</div>
 </body>
 </html>

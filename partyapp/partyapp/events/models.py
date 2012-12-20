@@ -2,7 +2,6 @@
 from django.db import models
 from django.utils.timezone import now
 from django.contrib.auth.models import User
-from django.utils.timezone import now
 
 class Party(models.Model):
 	author = models.ForeignKey(User, verbose_name='author')
@@ -32,7 +31,6 @@ class Party(models.Model):
 	@models.permalink
 	def get_absolute_url(self):
 	    return ('party_detail', (), {'slug': self.slug})
-
 
 
 class Club(models.Model):

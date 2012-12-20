@@ -1,14 +1,15 @@
 {% extends "base.html" %}
 
 {% block title %}
-<p>Party eintragen</p>
+	<p>Party eintragen</p>
 {% endblock %}
 
 {% block content %}
+
 {% url add_party as action_url %}
-	<a class="button" href="{% url add_club %}">
+<a class="button" href="{% url add_club %}">
 	<button>Club hinzufügen</button>
-	</a>
+</a>
 <form action="{{ action_url }}" method="post" enctype="multipart/form-data">
 	<table>
 		{{ form.as_table }}
@@ -18,4 +19,5 @@
 	<p><input type="submit" value="Speichern"/></p>
 </form>
 <a href="{% url party_list %}">zurück zur Übersicht</a>
+
 {% endblock %}
