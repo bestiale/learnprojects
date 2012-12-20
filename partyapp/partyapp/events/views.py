@@ -30,7 +30,7 @@ def add(request):
         	party.author = request.user
         	party.slug = slugify(party.title)
         	party.save()
-        	return redirect('party_list')
+        	return redirect(party.get_absolute_url())
     else:
         form = PartyForm()
     return render(request, 'events/addpartyform.html',
