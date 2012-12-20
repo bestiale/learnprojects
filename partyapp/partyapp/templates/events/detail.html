@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<header>
+	<h2>{{ party.title }}</h2>
+	<img src="{{ party.picture.url }}" alt="bild von {{ party.title }}">
+	<p class="date">{{ party.party_date|date:"j. F Y" }}</p>
+	{% if user == party.author and not party.is_past %}
+	<a class="button" href="{% url party_edit slug=party.slug %}">
+		<button>Edit</button>
+	</a>
+	{% endif %}
+	{% if not party.is_past %}
+		{% if user.is_authenticated %}
+			{% if user not in guests %}
+				<a href="{% url sign_party slug=party.slug %}">
+					<button>Teilnehmen</button>
+				</a>
+			{% else %}
+				<p class="gast">Du nimmst teil</p>
+			{% endif %}
+		{% else %}
+			<a href="/accounts/login">
+				<button>Einloggen</button>
+			</a>
+		{% endif %}
+	{% endif %}
+</header>
+<section>
+	<p>Organisator: {{ party.author }}</p>
+	<p>Club: {{ party.club }}</p>
+	<p>Beschreibung:<br/> {{ party.description }}</p>
+	<p>Public: {{ party.public }}</p>
+	<p><a href="{% url party_list %}">zurück zur Übersicht</a></p>
+</section>
+
+	{% block visitors %}
+		<div id="sidebar">
+			<h3>Guests</h3>
+			{% for guest in guests %}
+				<p>{{ guest }}</p>
+			{% endfor %}
+		</div>
+	{% endblock %}
+
+{% endblock %}

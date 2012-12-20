@@ -1,0 +1,8 @@
+{% if user.is_authenticated %}
+    <p>Hallo {{ user.username }}!</p>
+    <p><a href="{% url userauth_password_change %}">Passwort ändern</a></p>
+    <p><a href="{% url userauth_logout %}">Logout</a></p>
+{% else %}
+    <p><a href="{% url userauth_login %}">Login</a></p>
+    <a href="{% url userauth_register %}">Registrieren</a></p>
+{% endif %}

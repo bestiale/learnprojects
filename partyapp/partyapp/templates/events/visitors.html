@@ -1,0 +1,10 @@
+{% extends "detail.html" %}
+
+{% block visitors %}
+
+{% for visitor in visitor_list %}
+	<p>{{ visitor.user }}</p>
+	<p>Test</p>
+{% endfor %}
+
+{% endblock %}

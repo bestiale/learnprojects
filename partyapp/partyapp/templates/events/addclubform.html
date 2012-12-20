@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+<p>Club eintragen</p>
+{% endblock %}
+
+{% block content %}
+{% url add_club as action_url %}
+<form action="{{ action_url }}" method="post" enctype="multipart/form-data">
+	<table>
+		{{ form.as_table }}
+	</table>
+	{% csrf_token %}
+	{{ form.slug }}
+	<p><input type="submit" value="Speichern"/></p>
+</form>
+<a href="{% url party_list %}">zurück zur Übersicht</a>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+	{% if not object_list %}
+	<h4>Du hast noch keine Party eingetragen</h4>
+	{% endif %}
+	{% for party in object_list %}
+	{% url party_detail slug=party.slug as action_url %}
+	<a href="{{ action_url }}">
+				<div class="list">
+				<img src="{{ party.picture.url }}" alt="bild von {{ party.title }}">
+				<p>{{ party.title }}</p>
+				<p>{{ party.party_date|date:"j. F Y" }}</p>
+				</div>
+				</a>
+{% endfor %}
+{% endblock %}

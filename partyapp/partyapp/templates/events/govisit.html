@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if not object_list %}
+<h4>Du hast dich für keine Party angemeldet</h4>
+{% else %}
+<h4> Du wirst an diese Partys teilnehmen</h4>
+	{% for guest in object_list %}
+	{% url party_detail slug=guest.party.slug as action_url %}
+<a href="{{ action_url }}">
+				<div class="list">
+				<img src="{{ guest.party.picture.url }}" alt="bild von {{ party.title }}">
+				<p>{{ guest.party.title }}</p>
+				<p>{{ guest.party.party_date|date:"j. F Y" }}</p>
+				</div>
+				</a>
+{% endfor %}
+{% endif %}
+{% endblock %}
